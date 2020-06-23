@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html>
 <title>SOUL NIGHT CALCULATOR</title>
-<body>
+  <style>body {
+  font-family: lucida console;
+    background-color: lightblue;
+  }
+    span {background:black; color:white; padding:5px;}
+  span:empty {
+    display: none; /* or visibility: hidden */
+}
+  
 
-<h2>SOUL NIGHT CALCULATOR</h2>
-  <sub>lovingly made by delicate who can't do maths but can code kinda :)
-    <br><br>
+  </style>
+<body>
+ 
+<h2>SOUL NIGHT RESOURCE CALCULATOR 💕</h2>
+  <p style="font-size:12px;">lovingly made by delicate who can't do maths but can code kinda :)</h3><br>
+  </p><br><br>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 
 <p>
-  <label><b>BASE DROPRATE</b> (right click resource and check bestiary)</label><br>
-  <input id="bd" type="number" placeholder="%" onchange="calculate()">
+  <label><b>BASE DROPRATE</b> (right click resource and check bestiary)</label><br><br>
+  <input id="bd" type="number" placeholder="%" onchange="calculate()"><br><br><br>
 </p>
   
   <p>
-    <label><b>AVERAGE PRICE OF RESOURCE IN KK</b> (e.g. if 35000k, enter 35) </label><br>
-  <input id="price" type="number" placeholder="KK" onchange="calculate()">
+    <label><b>AVERAGE PRICE OF RESOURCE IN KK</b> (e.g. if 35000k, enter 35)</label><br>
+  <br><input id="price" type="number" placeholder="KK" onchange="calculate()">
 </p>
-  
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
   
     <p><br><h3>SCORE: <span id="outputScore"></span></h3></p>
-    <p>(if you have x2 of the monster in the mob, multiply this score by 2, etc.)
-      
-  </p>
-  <p>200 score overall required to enter soul night!</p>
 
+  <p style="font-size:12px;">200 score overall required to enter soul night!</p>
+  </p>
 <script>
 function calculate() {
   var bd = document.getElementById('bd').value;
