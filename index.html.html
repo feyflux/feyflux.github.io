@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>SOUL NIGHT CALCULATOR</title>
+<body>
+
+<h2>SOUL NIGHT CALCULATOR</h2>
+  <sub>lovingly made by delicate who can't do maths but can code kinda :)
+    <br><br>
+
+
+<p>
+  <label><b>BASE DROPRATE</b> (right click resource and check bestiary)</label><br>
+  <input id="bd" type="number" placeholder="%" onchange="calculate()">
+</p>
+  
+  <p>
+    <label><b>AVERAGE PRICE OF RESOURCE IN KK</b> (e.g. if 35000k, enter 35) </label><br>
+  <input id="price" type="number" placeholder="KK" onchange="calculate()">
+</p>
+  
+  
+    <p><br><h3>SCORE: <span id="outputScore"></span></h3></p>
+    <p>(if you have x2 of the monster in the mob, multiply this score by 2, etc.)
+
+<script>
+function calculate() {
+  var bd = document.getElementById('bd').value;
+  var price = document.getElementById('price').value;
+  var dr = bd * 5;
+    if (dr > 100) {dr = 100};
+  var myResult = (dr * (price * 4)) / 100;
+  document.getElementById("outputScore").innerHTML = myResult;}
+
+</script>
+</body>
+</html>
